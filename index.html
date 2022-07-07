@@ -15,26 +15,38 @@
     <h1>
         Let's Play Rock-Paper-Scissor !!!
     </h1>
-    <ul>
-        <li>
-            <img src="imgs/rock.png" alt="Rock" class="icons"> beats <img src="imgs/scissor.png" alt="Scissor" class="icons">
-        </li>
-        <li>
-            <img src="imgs/paper.png" alt="Paper" class="icons"> beats <img src="imgs/rock.png" alt="Rock" class="icons">
-        </li>
-        <li>
-            <img src="imgs/scissor.png" alt="Scissor" class="icons"> beats <img src="imgs/paper.png" alt="Paper" class="icons">
-        </li>
-    </ul>
-    <p>Should be a simple game</p>
-    <button class="btn"><img src="imgs/rock.png" class="icons"></button>
-    <button class="btn"><img src="imgs/paper.png" class="icons"></button>
-    <button class="btn"><img src="imgs/scissor.png" class="icons"></button>
-    <input type="submit" value="thats my final choice" class="submitted">
+    <div class="rules">
+        <ul>
+            <li>
+                <img src="imgs/rock.png" alt="Rock" class="icons"> beats <img src="imgs/scissor.png" alt="Scissor" class="icons">
+            </li>
+            <li>
+                <img src="imgs/paper.png" alt="Paper" class="icons"> beats <img src="imgs/rock.png" alt="Rock" class="icons">
+            </li>
+            <li>
+                <img src="imgs/scissor.png" alt="Scissor" class="icons"> beats <img src="imgs/paper.png" alt="Paper" class="icons">
+            </li>
+        </ul>
+    </div>
+    <div class="reset">
+        Should be a simple game    
+        <button class="resetScore">Reset Scores</button>
+    </div>
+
+    
+    <div class="choice-input">
+        <button class="btn"><img src="imgs/rock.png" class="icons"></button>
+        <button class="btn"><img src="imgs/paper.png" class="icons"></button>
+        <button class="btn"><img src="imgs/scissor.png" class="icons"></button>
+        <div>
+            <input type="submit" value="Submit" class="submit">
+        </div>
+
+    </div>
     <script src="app.js"></script>
     <p>
         RESULTS:<br>
-        
+
     </p>
 </body>
 </html>

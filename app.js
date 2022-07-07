@@ -7,7 +7,7 @@ const choice=[`Rock`,`Paper`,`Scissor`];
 
 function computerPlay()
 {
-    return choice[~~((Math.floor(Math.random()*30))%3)];
+    return choice[((Math.floor(Math.random()*30))%3)];
 }
 function singleround(playerSelection,computerSelection)
 {
