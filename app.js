@@ -34,14 +34,42 @@ function singleround(playerSelection,computerSelection)
     }
 }
 
+let resText=document.getElementById('result')
+console.log(resText)
+let r=document.getElementById('r')
+let p=document.getElementById('p')
+let s=document.getElementById('s')
+let finalPick = -1
+r.addEventListener('click',()=>{
+    finalPick=0
+})
+p.addEventListener('click',()=>{
+    finalPick=1
+})
+s.addEventListener('click',()=>{
+    finalPick=2
+})
+let submit=document.querySelector('input');
+console.log(submit)
+submit.addEventListener('click', submitClicked)
 
-
-for(let i=0;i<36;i++)
-    console.log(`Round ${i+1} : `+singleround(playerSelection,computerSelection));
-console.log(`Computer Score : ${computerScore} \t Player Score : ${playerScore}`);
-if(playerScore>computerScore)
-    console.log(`Player wins by ${playerScore-computerScore} rounds`);
-else if(computerScore>playerScore)
-    console.log(`Computer wins by ${computerScore-playerScore} rounds`);
-else
-    console.log(`A draw -_-`)
+function submitClicked() {
+    if(finalPick == -1) {
+        resText.textContent="Pick something first...";
+    } else if(finalPick == 0) {
+        resText.textContent="Rock Picked"
+    }else if(finalPick == 1) {
+        resText.textContent="Paper Picked"
+    }else if(finalPick == 2) {
+        resText.textContent="Scissors Picked"
+    }
+}
+// for(let i=0;i<36;i++)
+//     console.log(`Round ${i+1} : `+singleround(playerSelection,computerSelection));
+// console.log(`Computer Score : ${computerScore} \t Player Score : ${playerScore}`);
+// if(playerScore>computerScore)
+//     console.log(`Player wins by ${playerScore-computerScore} rounds`);
+// else if(computerScore>playerScore)
+//     console.log(`Computer wins by ${computerScore-playerScore} rounds`);
+// else
+//     console.log(`A draw -_-`)
